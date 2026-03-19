@@ -220,6 +220,8 @@ optimization: {
 
 #### Imagemin (gifsicle)
 ![Imagemin GIF Beispiel](./examples/Imagemin/imageminExampleGIF.png)
+*Zoom-Vergleich:*
+![Imagemin SVG Zoom](./examples/Imagemin/imageminExamplesSVGZoom.png)
 
 #### Sharp (gif mode)
 ![Sharp GIF Beispiel](./examples/Sharp/exampleGIF.png)
@@ -232,8 +234,7 @@ optimization: {
 
 #### Imagemin (svgo)
 ![Imagemin SVG Beispiel](./examples/Imagemin/imageminExamplesSVG.png)
-*Zoom-Vergleich:*
-![Imagemin SVG Zoom](./examples/Imagemin/imageminExamplesSVGZoom.png)
+
 
 #### Sharp + SVGO (svgoMinify)
 ![Sharp SVGO Beispiel](./examples/Sharp/exampleSVG.png)

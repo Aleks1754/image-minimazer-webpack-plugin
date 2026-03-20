@@ -62,7 +62,7 @@ export default (env)=> {
                         implementation: ImageMinimizerPlugin.imageminMinify,
                         options: {
                             plugins: [
-                                ["gifsicle", { interlaced: true, colors: 64, optimizationLevel: 9 }],
+                                ["gifsicle", { interlaced: true, optimizationLevel: 3 }],
                                 ["mozjpeg", { quality: 75 }],
                                 ["pngquant", { quality: [0.6, 0.8] }],
                                 ["svgo", { plugins: [{ name: "preset-default" }] }]

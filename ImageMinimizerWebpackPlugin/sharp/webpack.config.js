@@ -110,7 +110,7 @@ export default (env) => {
                                     gif: {
                                         reuse: true,                   // re-use existing palette for faster processing; false generates a new palette (slower)
                                         progressive: false,            // do not use interlaced GIF; rarely needed
-                                        colours: 256,                  // maximum number of palette entries including transparency (2–256)
+                                        colours: 64,                  // maximum number of palette entries including transparency (2–256)
                                         effort: 7,                     // CPU effort: 1 = fastest, 10 = slowest
                                         dither: 1.0,                   // level of Floyd-Steinberg error diffusion for smoother gradients (0–1)
                                         interFrameMaxError: 0,         // maximum inter-frame error for transparency (0 = lossless)

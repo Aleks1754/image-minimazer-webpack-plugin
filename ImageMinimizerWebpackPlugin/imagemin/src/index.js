@@ -1,8 +1,8 @@
-import img1 from "./images/1024x1024.jpeg";
+import img1 from "./images/1024x1024.jpeg?as=webp";
 import img2 from "./images/dansing_cat.gif";
 import img3 from "./images/fox.svg";
-import img4 from "./images/question.png";
-import img5 from "./images/present.jpg";
+import img4 from "./images/question.png?as=webp";
+import img5 from "./images/present.jpg?as=webp";
 
 import "./style.css";
 

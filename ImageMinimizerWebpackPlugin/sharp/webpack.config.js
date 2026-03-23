@@ -15,7 +15,7 @@ export default (env) => {
             path: path.resolve(__dirname, "dist"),
             filename: "[name].min.js",
             clean: true,
-            assetModuleFilename: "images/[name].min.[ext]",
+            assetModuleFilename: "images/[name][ext]",
         },
         devtool: false,
         plugins: [
@@ -43,7 +43,7 @@ export default (env) => {
                     test: /\.svg$/i,
                     type: "asset",
                     generator: {
-                        filename: "images/[name].min.[ext]",
+                        filename: "images/[name][ext]",
                     },
                 },
             ],
@@ -136,7 +136,23 @@ export default (env) => {
                                     ],
                                 },
                             }
-                        }]
+                        }],
+                    generator: [
+                        {
+                            preset: "webp",
+                            implementation: ImageMinimizerPlugin.sharpGenerate,
+                            options: {
+                                encodeOptions: {
+                                    webp: {
+                                        quality: 60,
+                                        loop: 0,
+                                    },
+                                },
+                            },
+                            filename: "images/[name].webp",
+                        },
+                    ],
+                    deleteOriginalAssets: false,
                 }),
             ],
         },

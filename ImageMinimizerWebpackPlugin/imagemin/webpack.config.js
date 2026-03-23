@@ -39,13 +39,18 @@ export default (env)=> {
                     use: ['style-loader', 'css-loader'],
                 },
 
-                // Images
+                // JPG/PNG/GIF
                 {
-                    test: /\.(jpe?g|png|gif|svg)$/i,
+                    test: /\.(jpe?g|png)$/i,
                     type: 'asset/resource',
-                    generator: {
-                        filename: 'images/[name].min.[ext]'
-                    },
+                    generator: { filename: "images/[name][ext]" }
+                },
+
+                // SVG/GIF
+                {
+                    test: /\.(svg|gif)$/i,
+                    type: 'asset/resource',
+                    generator: { filename: "images/[name][ext]" }
                 }
             ],
         },
@@ -62,13 +67,22 @@ export default (env)=> {
                         implementation: ImageMinimizerPlugin.imageminMinify,
                         options: {
                             plugins: [
-                                ["gifsicle", { interlaced: true, optimizationLevel: 3 }],
+                                ["gifsicle", {optimizationLevel: 3,}],
                                 ["mozjpeg", { quality: 75 }],
                                 ["pngquant", { quality: [0.6, 0.8] }],
-                                ["svgo", { plugins: [{ name: "preset-default" }] }]
                             ],
                         },
-                    }
+                    },
+                    generator: [
+                        {
+                            preset: "webp",
+                            implementation: ImageMinimizerPlugin.imageminGenerate,
+                            options: {
+                                plugins: [["imagemin-webp", { quality: 75 }]],
+                            },
+                            filename: "images/[name].webp",
+                        },
+                    ],
                 })
             ],
         },

@@ -1,12 +1,9 @@
 {
   "name": "image-optimisation",
   "version": "1.0.0",
-  "description": "Ein Lernprojekt zum Vergleich zweier verschiedener Bildoptimierungs-Ansätze mit dem **Image Minimizer Webpack Plugin**. Das Projekt demonstriert, wie dieselbe Aufgabe (Bildoptimierung während des Webpack-Builds) mit zwei unterschiedlichen Bibliotheken gelöst werden kann.",
+  "description": "Ein Lernprojekt zum Vergleich zweier verschiedener Bildoptimierungs-Ansätze mit dem Image Minimizer Webpack Plugin. Das Projekt demonstriert, wie dieselbe Aufgabe (Bildoptimierung während des Webpack-Builds) mit zwei unterschiedlichen Bibliotheken gelöst werden kann.",
   "main": "pipiline.js",
   "type": "module",
-  "directories": {
-    "example": "examples"
-  },
   "scripts": {
     "test": "node pipeline.js"
   },
